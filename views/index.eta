@@ -21,7 +21,7 @@
 
       <label for="message">Message:</label><br>
       <input type="text" id="message" name="message" required><br><br>
-      <input type="submit" value="Submit">
+      <button type="submit">Send</button>
       
     </form>
   </div>
