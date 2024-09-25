@@ -20,7 +20,7 @@
       <input type="text" id="sender" name="sender" required><br><br>
 
       <label for="message">Message:</label><br>
-      <textarea id="message" name="message" required></textarea><br><br>
+      <input type="text" id="message" name="message" required></input><br><br>
 
       <button type="submit">Send</button>
     </form>
