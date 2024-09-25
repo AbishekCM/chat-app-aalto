@@ -1,19 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chat Application</title>
   <style>
-    body { font-family: Arial, sans-serif; }
-    .chat-form, .messages { margin: 20px; }
-    .messages { list-style-type: none; padding: 0; }
-    .message { margin-bottom: 10px; }
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .chat-form,
+    .messages {
+      margin: 20px;
+    }
+
+    .messages {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .message {
+      margin-bottom: 10px;
+    }
   </style>
 </head>
+
 <body>
   <h1>Simple Chat Application</h1>
-
+  <ul class="messages">
+    <% if (it.messages.length > 0) { %>
+    <% it.messages.forEach(msg => { %>
+    <li class="message"><%= msg.sender %>:<%= msg.message %></li>
+    <% }) %>
+    <% } else { %>
+    <li>No messages yet!</li>
+    <% } %>
+  </ul>
+  
   <div class="chat-form">
     <form action="/" method="POST">
       <label for="sender">Name:</label><br>
@@ -22,18 +46,11 @@
       <label for="message">Message:</label><br>
       <input type="text" id="message" name="message" required /><br><br>
       <input type="submit">
-      
+
     </form>
   </div>
 
-  <ul class="messages">
-    <% if (it.messages.length > 0) { %>
-      <% it.messages.forEach(msg => { %>
-        <li class="message"><%= msg.sender %>:<%= msg.message %></li>
-      <% }) %>
-    <% } else { %>
-      <li>No messages yet!</li>
-    <% } %>
-  </ul>
+
 </body>
+
 </html>
