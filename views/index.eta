@@ -20,9 +20,9 @@
       <input type="text" id="sender" name="sender" required><br><br>
 
       <label for="message">Message:</label><br>
-      <input type="text" id="message" name="message" required></input><br><br>
-      <input type="submit">Send</input>
-      <!--<button type="submit">Send</button>-->
+      <input type="text" id="message" name="message" required><br><br>
+      <input type="submit">
+      
     </form>
   </div>
 
