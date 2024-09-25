@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Application</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .chat-form, .messages { margin: 20px; }
+    .messages { list-style-type: none; padding: 0; }
+    .message { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Simple Chat Application</h1>
+
+  <div class="chat-form">
+    <form action="/" method="POST">
+      <label for="sender">Name:</label><br>
+      <input type="text" id="sender" name="sender" required><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" required></textarea><br><br>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <ul class="messages">
+    <% if (it.messages.length > 0) { %>
+      <% it.messages.forEach(msg => { %>
+        <li class="message"><strong><%= msg.sender %>:</strong> <%= msg.message %></li>
+      <% }) %>
+    <% } else { %>
+      <li>No messages yet!</li>
+    <% } %>
+  </ul>
+</body>
+</html>

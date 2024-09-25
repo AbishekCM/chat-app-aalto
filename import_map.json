@@ -1,0 +1,8 @@
+{
+    "imports": {
+      "postgres": "https://deno.land/x/postgres@v0.17.0/mod.ts",
+      "eta": "https://deno.land/x/eta@v1.12.3/mod.ts",
+      "oak": "https://deno.land/x/oak@v11.1.0/mod.ts"
+    }
+  }
+  
