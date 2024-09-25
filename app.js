@@ -66,7 +66,7 @@ router.post("/", async (context) => {
   `);
   
   // Redirect to the homepage (POST/Redirect/GET pattern)
-  context.response.redirect("/", 303);
+  //context.response.redirect("/", 303);
 });
 
 // Middleware to serve static files (for CSS, images, etc.)
