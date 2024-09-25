@@ -18,13 +18,6 @@ const client = new Client({
 // Connect to the database
 await client.connect();
 
-await client.queryArray(`
-    CREATE TABLE IF NOT EXISTS messages (
-      id SERIAL PRIMARY KEY,
-      sender TEXT NOT NULL,
-      message TEXT NOT NULL
-    );
-  `);
 
 // Configure Eta to use the views directory for templates
 configure({
