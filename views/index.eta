@@ -31,13 +31,13 @@
   <ul class="messages">
     <% if (it.messages.length > 0) { %>
     <% it.messages.forEach(msg => { %>
-    <li class="message"><%= msg.sender %>:<%= msg.message %></li>
+    <li class="message"><%= msg.sender %>: <%= msg.message %></li>
     <% }) %>
     <% } else { %>
     <li>No messages yet!</li>
     <% } %>
   </ul>
-  
+
   <div class="chat-form">
     <form action="/" method="POST">
       <label for="sender">Name:</label><br>
