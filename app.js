@@ -10,8 +10,8 @@ const client = new Client({
     hostname: Deno.env.get("DB_HOST"),
     port: Number(Deno.env.get("DB_PORT")),
     tls: {
-      enforce: false // Render.com doesn't need enforced TLS for internal connections
-    }
+        rejectUnauthorized: false // Render.com doesn't need enforced TLS for internal connections
+    },
   });
   
 
