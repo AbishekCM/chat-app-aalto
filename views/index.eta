@@ -29,7 +29,7 @@
   <ul class="messages">
     <% if (it.messages.length > 0) { %>
       <% it.messages.forEach(msg => { %>
-        <li class="message"><strong><%= msg.sender %>:</strong> <%= msg.message %></li>
+        <li class="message"><%= msg.sender %>:<%= msg.message %></li>
       <% }) %>
     <% } else { %>
       <li>No messages yet!</li>

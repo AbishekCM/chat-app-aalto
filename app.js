@@ -41,8 +41,8 @@ router.get("/", async (context) => {
   const messages =   result.rows || [];
 
   // Render the homepage with the messages and form
-  //context.response.body = await renderFile("index.eta", { messages });
-  context.response.body = await renderFile({ messages });
+  context.response.body = await renderFile("index.eta", { messages });
+  
 });
 
 // Handle message submission (POST request)
